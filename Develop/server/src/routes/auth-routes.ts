@@ -9,11 +9,11 @@ export const login = async (req: Request, res: Response) => {
   const user = await User.findOne({ where: { username } 
   });
   if (!user) {
-    return res.sendStatus(401).json({ message: 'Authorization unsuccessful' });
+    return res.status(401).json({ message: 'Authorization unsuccessful' });
   }
   const passwordVerify = await bcrypt.compare(password, user.password);
   if (!passwordVerify) {
-    return res.sendStatus(401).json({ message: 'Authorization unsuccessful' });
+    return res.status(401).json({ message: 'Authorization unsuccessful' });
   }
   const secretKey = process.env.JWT_SECRET_KEY || '';
   const token = jwt.sign({ username }, secretKey, { expiresIn: '1h' });
