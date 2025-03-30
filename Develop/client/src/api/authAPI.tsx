@@ -3,7 +3,7 @@ import { UserLogin } from "../interfaces/UserLogin";
 const login = async (userInfo: UserLogin) => {
   // TODO: make a POST request to the login route
   try {
-    const response = await fetch('/api/auth/login', {
+    const response = await fetch('/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -12,8 +12,14 @@ const login = async (userInfo: UserLogin) => {
     });
 
     if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(`Error: ${errorData.message}`);
+      const contentType = response.headers.get('Content-Type');
+      if (contentType && contentType.includes('application/json')) {
+        const errorData = await response.json();
+        throw new Error(`Error: ${errorData.message}`);
+      } else {
+        const errorText = await response.text();
+        throw new Error(`Error: ${errorText}`);
+    }
     }
 
     const data = await response.json();
