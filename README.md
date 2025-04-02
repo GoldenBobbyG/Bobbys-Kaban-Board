@@ -11,12 +11,20 @@ To set up and run Bobby’s Kanban Board locally, start by cloning the repositor
 ## Usage
 Bobby’s Kanban Board is designed for task management and workflow organization, making it ideal for individuals and teams looking to track their work efficiently. 
 
+## Snippet
+![image](https://github.com/user-attachments/assets/a2812f44-41d2-47dc-abec-a0518af59a8d)
+
+## Link To Deployed App
+https://bobbys-kaban-board.onrender.com/
+
 ## Contribution
 none
 
 ## Tests
 N/A
 
+## Notes 
+Help from tutor to deploy to render. Copilot for debuging. 
 
 ## License
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
