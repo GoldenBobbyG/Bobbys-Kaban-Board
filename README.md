@@ -9,7 +9,7 @@ Bobby’s Kanban Board is a full-stack task management application designed to s
 To set up and run Bobby’s Kanban Board locally, start by cloning the repository with git clone [your-repo-link] and navigate into the project directory. Install dependencies for both the backend and frontend by running npm install inside the server and client folders. Next, create a .env file in the server directory and configure the necessary environment variables, including PORT, DATABASE_URL, and JWT_SECRET.
 
 ## Usage
-Bobby’s Kanban Board is designed for task management and workflow organization, making it ideal for individuals and teams looking to track their work efficiently. 
+Bobby’s Kanban Board is designed for task management and workflow organization, making it ideal for individuals and teams looking to track their work efficiently. Go to server/src/seeds/user-seeds.ts to see the UN and PW needed to sign in and begin looking at the tickets on the board. 
 
 ## Snippet
 ![image](https://github.com/user-attachments/assets/a2812f44-41d2-47dc-abec-a0518af59a8d)
